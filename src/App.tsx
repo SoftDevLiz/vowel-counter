@@ -21,3 +21,14 @@ function App() {
 }
 
 export default App
+
+// TODO:
+// I want it to live update as you type :)
+// 1. Abstract counter component...
+// 2. Create counter functionality
+// 3. Create reset button
+// 4. Make it mobile friendly
+// 5. Style the front end!
+// Bonus: How do we make a cool animation as it counts while you type? I'm thinking a black background and big white letters that spreads over the page
+// what would be REALLY cool if the letters were from what the user has typed... so as you type the letters start creeping onto the page from the bottom up
+// and as you delete them they dissapear from the page.
