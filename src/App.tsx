@@ -1,3 +1,4 @@
+import VowelCounter from "./components/counter"
 import { Textarea } from "./components/ui/textarea"
 import "./tailwind.css"
 
@@ -13,7 +14,7 @@ function App() {
           <Textarea placeholder="start typing..." className="max-w-[250px]"/>
       </div>
       <div className="flex items-center justify-center p-10 text-5xl">
-        <h1>5</h1>
+        <VowelCounter />
       </div>
 
     </>
