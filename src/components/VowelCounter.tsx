@@ -1,13 +1,30 @@
 
 const vowels = ['a', 'e', 'i', 'o', 'u']
 
-const VowelCounter = () => {
+type VowelCounterProps = {
+    string: string,
+}
+
+const VowelCounter = ({string}: VowelCounterProps) => {
+
+const lowerCaseString = string.toLowerCase();
+let count = 0;
+
+for (const letter of lowerCaseString) {
+    if (vowels.includes(letter)) {
+        count++;
+    }
+}
 
     return (
         <div>
-            <h1>2</h1>
+            <h1>{count}</h1>
         </div>
     )
 };
 
 export default VowelCounter;
+
+// Logic:
+// Look thru each letter in the string - If the letter is a vowel, add one to the counter
+// 
