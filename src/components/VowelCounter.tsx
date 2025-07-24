@@ -24,7 +24,3 @@ for (const letter of lowerCaseString) {
 };
 
 export default VowelCounter;
-
-// Logic:
-// Look thru each letter in the string - If the letter is a vowel, add one to the counter
-// 

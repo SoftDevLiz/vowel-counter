@@ -1,8 +1,10 @@
+import { useState } from "react";
 import VowelCounter from "./components/VowelCounter"
 import { Textarea } from "./components/ui/textarea"
 import "./tailwind.css"
 
 function App() {
+const [text, setText] = useState("");
 
   return (
     <>
@@ -11,11 +13,11 @@ function App() {
         <h2 className="text-xl p-5">Enter your text below</h2>
       </div>
       <div className="flex flex-col items-center justify-center">
-          <Textarea placeholder="start typing..." className="max-w-[250px]"/>
+          <Textarea placeholder="start typing..." className="max-w-[250px]" onChange={event => setText(event.target.value)}/>
       </div>
       <div className="flex items-center justify-center p-10 text-5xl">
         <VowelCounter 
-        string="yeahhhs"
+        string={text}
         />
       </div>
 
