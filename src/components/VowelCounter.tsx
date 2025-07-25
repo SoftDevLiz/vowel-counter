@@ -2,24 +2,24 @@
 const vowels = ['a', 'e', 'i', 'o', 'u']
 
 type VowelCounterProps = {
-    string: string,
+    text: string,
 }
 
-const VowelCounter = ({string}: VowelCounterProps) => {
+const VowelCounter = ({text}: VowelCounterProps) => {
 
-const lowerCaseString = string.toLowerCase();
+const lowerCaseText = text.toLowerCase();
 let count = 0;
 
-for (const letter of lowerCaseString) {
+for (const letter of lowerCaseText) {
     if (vowels.includes(letter)) {
         count++;
     }
 }
 
     return (
-        <div>
+        <div className="text-3xl sm:text-4xl md:text-5xl text-center break-words max-w-[90vw]">
             <h1>{count}</h1>
-        </div>
+        </div> 
     )
 };
 
