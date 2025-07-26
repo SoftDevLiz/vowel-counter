@@ -3,6 +3,14 @@ import "./tailwind.css"
 import Header from "./components/Header";
 import UserInput from "./components/UserInput";
 import { useState } from "react";
+import LetterRain from "./components/LetterRain";
+
+export type Letter = {
+  id: string;
+  char: string;
+  left: number;
+  duration: number;
+}
 
 function App() {
 
@@ -10,7 +18,7 @@ function App() {
   const [text, setText] = useState("");
 
   // useState for LetterRain
-  const [letters, setLetters] = useState<{ id: string; char: string; left: number; duration: number }[]>([]);
+  const [letters, setLetters] = useState<Letter[]>([]);
 
 
 
@@ -21,6 +29,7 @@ function App() {
       <Header />
       <VowelCounter text={text}/>
       <UserInput text={text} setText={setText} setLetters={setLetters} />
+      <LetterRain letters={letters} />
     </div>
   )
 }
