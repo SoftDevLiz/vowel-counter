@@ -25,11 +25,13 @@ function App() {
 
 
   return (
-    <div className="flex flex-col min-h-screen items-center justify-evenly px-4 sm:px-8 bg-zinc-900 text-white">
-      <Header />
-      <VowelCounter text={text}/>
-      <UserInput text={text} setText={setText} setLetters={setLetters} />
+    <div className="min-h-screen bg-neutral-900">
       <LetterRain letters={letters} />
+      <div className="flex flex-col min-h-screen items-center justify-evenly px-4 sm:px-8 bg-transparent text-white relative z-10">
+        <Header />
+        <VowelCounter text={text}/>
+        <UserInput text={text} setText={setText} setLetters={setLetters} />
+      </div>
     </div>
   )
 }

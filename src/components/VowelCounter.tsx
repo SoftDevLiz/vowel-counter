@@ -17,7 +17,7 @@ for (const letter of lowerCaseText) {
 }
 
     return (
-        <div className="text-3xl sm:text-4xl md:text-5xl text-center break-words max-w-[90vw]">
+        <div className="text-3xl sm:text-4xl md:text-5xl text-center break-words max-w-[90vw] font-concertone">
             <h1>{count}</h1>
         </div> 
     )

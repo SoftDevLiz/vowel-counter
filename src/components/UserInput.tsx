@@ -25,7 +25,7 @@ const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
                 id: Date.now().toString(),
                 char: newChar,
                 left: Math.random() * 90,
-                duration: Math.random() * 8 + 4, // 4-12 seconds for much slower fall
+                duration: Math.random() * 8 + 4, 
             };
 
             setLetters((prev) => [...prev, newLetter]);
@@ -47,7 +47,7 @@ const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
                 }}
                 className="w-full" 
             />
-            <Button onClick={() => setText("")}>Clear</Button>
+            <Button onClick={() => setText("")} className='font-concertone bg-teal-700 hover:bg-teal-600'>Clear</Button>
         </div>
     )
 }

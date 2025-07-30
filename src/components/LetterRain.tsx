@@ -35,7 +35,7 @@ const LetterRain = ({ letters }: { letters: Letter[] }) => {
                 return (
                     <div
                     key={id}
-                    className="absolute top-0 text-3xl animate-fall"
+                    className="absolute top-0 text-3xl animate-fall z-0"
                     style={{
                         left: `${left}%`,
                         animationDuration: `${duration}s`,
