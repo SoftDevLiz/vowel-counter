@@ -1,5 +1,6 @@
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
+import { useRef } from 'react';
 
 type UserInputProps = {
     text: string,
@@ -8,25 +9,31 @@ type UserInputProps = {
 }
 
 const UserInput = ({text, setText, setLetters}: UserInputProps) => {
+    const prevTextRef = useRef(text);
 
 // Change event for LetterRain component
 const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
-    const lastChar = value.slice(-1);
+    const prevText = prevTextRef.current;
+    
+    // Only create a letter if the text is growing (new character added)
+    if (value.length > prevText.length) {
+        const newChar = value.slice(prevText.length);
+        
+        if (newChar) {
+            const newLetter = {
+                id: Date.now().toString(),
+                char: newChar,
+                left: Math.random() * 90,
+                duration: Math.random() * 8 + 4, // 4-12 seconds for much slower fall
+            };
 
-    if (lastChar) {
-        const newLetter = {
-
-        id: Date.now().toString(),
-        char: lastChar,
-        left: Math.random() * 90,
-        duration: Math.random() * 2,
-
-    };
-
-    setLetters((prev) => [...prev, newLetter])
-
+            setLetters((prev) => [...prev, newLetter]);
+        }
     }
+    
+    // Update the previous text reference
+    prevTextRef.current = value;
 }
 
     return (
