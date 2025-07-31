@@ -1,9 +1,15 @@
 import { LucideMail } from "lucide-react";
+import { toast } from "sonner";
 
 const Footer = () => {
 
-    const handleClick = () => {
-        navigator.clipboard.writeText("lizmouton1@gmail.com");
+    const handleClick = async () => {
+        try {
+            await navigator.clipboard.writeText("lizmouton1@gmail.com");
+            toast.success("Email copied to clipboard");
+        } catch {
+            toast.error("Something went wrong, please shoot me an email so I can fix it!");
+        }
     }
     
     return (
