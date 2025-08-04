@@ -37,7 +37,7 @@ const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 }
 
     return (
-        <div className="flex flex-col items-center gap-4 sm:gap-5 w-full max-w-md">
+        <div className="flex flex-col items-center gap-5 sm:gap-6 w-full max-w-lg">
             <Textarea 
                 placeholder="start typing..." 
                 value={text} 

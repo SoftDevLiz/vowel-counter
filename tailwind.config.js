@@ -11,10 +11,19 @@ export default {
         safelist: [
             'animate-fall',
             'text-3xl',
+            'text-4xl',
             'sm:text-4xl',
+            'sm:text-5xl',
             'md:text-5xl',
+            'md:text-6xl',
+            'lg:text-6xl',
+            'lg:text-7xl',
             'text-lg',
+            'text-xl',
             'sm:text-xl',
+            'sm:text-2xl',
+            'md:text-2xl',
+            'md:text-3xl',
             'absolute',
             'top-0',
             'z-0',
@@ -37,6 +46,11 @@ export default {
             'font-concertone',
             'items-center',
             'gap-3',
-            'sm:gap-5'
+            'gap-4',
+            'gap-5',
+            'sm:gap-5',
+            'sm:gap-6',
+            'max-w-md',
+            'max-w-lg'
         ],
     };
