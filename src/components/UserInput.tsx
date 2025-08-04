@@ -47,7 +47,7 @@ const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
                 }}
                 className="w-full" 
             />
-            <Button onClick={() => setText("")} className='font-concertone bg-teal-700 hover:bg-teal-600'>Clear</Button>
+            <Button onClick={() => setText("")} size="lg" className='font-concertone bg-teal-700 hover:bg-teal-600'>Clear</Button>
         </div>
     )
 }

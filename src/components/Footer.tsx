@@ -13,10 +13,10 @@ const Footer = () => {
     }
     
     return (
-        <div className="flex justify-center text-white gap-2 bg-transparent py-4 cursor-pointer" onClick={handleClick}>
-        <LucideMail />
-        <h1>lizmouton1@gmail.com</h1>
-    </div>
+        <div className="flex justify-center items-center text-white gap-3 bg-transparent py-6 cursor-pointer" onClick={handleClick}>
+            <LucideMail className="w-7 h-7"/>
+            <h1 className="text-2xl">lizmouton1@gmail.com</h1>
+        </div>
     )
 }
 
