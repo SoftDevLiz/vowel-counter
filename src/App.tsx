@@ -22,8 +22,10 @@ function App() {
   const [letters, setLetters] = useState<Letter[]>([]);
 
   return (
-    <div className="min-h-screen bg-neutral-900 flex flex-col">
-      <LetterRain letters={letters} />
+    <div className="min-h-screen bg-neutral-900 flex flex-col overflow-hidden relative">
+      <div className="absolute inset-0 overflow-hidden">
+        <LetterRain letters={letters} />
+      </div>
       <div className="flex flex-col flex-1 items-center justify-evenly px-4 sm:px-8 bg-transparent text-white relative z-10">
         <Header />
         <VowelCounter text={text}/>
